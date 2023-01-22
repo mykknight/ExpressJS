@@ -3,11 +3,10 @@ const path = require('path');
 
 const express = require('express');
 
+const contcontrol = require('../controller/product')
+
 const router = express.Router();
 
-router.use('/contactus', (req,res,next) => {
-    res.sendFile(path.join(__dirname,'../','Views','contact.html'));
-    console.log('Contact done');
-});
+router.use('/contactus', contcontrol.contact);
 
 module.exports = router;
