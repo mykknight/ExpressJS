@@ -1,0 +1,23 @@
+.con-control {
+    display: block;
+    width: 100%;
+    color: blue;
+    margin: 1rem 0;
+}
+
+.contact-form {
+    width: 10%;
+    margin: auto;
+}
+
+.container {
+
+    border-radius: 5px;
+    background-color: #adc5e4;
+    padding: 100px 30px;
+    margin: 150px 50px;
+  }
+
+body{
+    background-color: rgba(196, 235, 130, 0.962);
+}
