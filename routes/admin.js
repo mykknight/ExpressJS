@@ -5,23 +5,15 @@ const express = require('express');
 const adminController = require('../controllers/admin');
 
 const router = express.Router();
+var cors = require('cors');
+router.use(cors());
 
-// /admin/add-product => GET
-router.get('/add-product', adminController.getAddProduct);
+router.post('/user/add-user', adminController.AddUser);
 
-// /admin/products => GET
-router.get('/products', adminController.getProducts);
+router.get('/user/get-user',adminController.GetUsers);
 
-// edit/products
-router.get('/edit-product/:pId', adminController.getEditProduct);
+router.put('/user/update-user/:prodID',adminController.updateUser);
 
-//post edit product
-router.post('/edit-product', adminController.postEditProducts);
-
-// /admin/add-product => POST
-router.post('/add-product', adminController.postAddProduct);
-
-// delete product
-router.post('/delete-product/:prdId', adminController.deleteProduct);
+router.delete('/user/delete-user/:prodID',adminController.DltUser);
 
 module.exports = router;
